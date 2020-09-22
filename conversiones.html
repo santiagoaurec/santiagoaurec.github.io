@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+    <link rel="stylesheet" href="conversiones.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h3>
+                Conversion de Tiempo
+            </h3>
+        </div>
+        <div class="ingresar">
+            <h4>
+                En primer lugar, escriba el numero que desea
+                convertir aqui:
+            </h4>
+            <input type="number"  id="numero" placeholder="">
+            <h4>
+                A continuacion, haga click en los botones
+                de opcion para la conversion deseada
+            </h4>
+        </div>
+        <div class="de">
+            <h3>
+                De:
+            </h3>
+            <label><input type="radio" value = "seg" name="deRadio" id="deSegundos">Segundos</label>
+            <label><input type="radio" value = "min" name="deRadio" id="deMinutos">Minutos</label>
+            <label><input type="radio" value = "hrs" name="deRadio" id="deHoras">Horas</label>
+            <label><input type="radio" value = "dia" name="deRadio" id="deDias">Dias</label>
+            <label><input type="radio" value = "" name="deRadio" id="deSemanas">Semanas</label>
+            <label><input type="radio" value = "" name="deRadio" id="deMeses">Meses</label>
+            <label><input type="radio" value = "" name="deRadio" id="deAnos">Anos</label>
+        </div>
+        <div class="a">
+            <h3>
+                A:
+            </h3>
+            <label><input type="radio" name="aRadio" id="aSegundos">Segundos</label>
+            <label><input type="radio" name="aRadio" id="aMinutos">Minutos</label>
+            <label><input type="radio" name="aRadio" id="aHoras">Horas</label>
+            <label><input type="radio" name="aRadio" id="aDias">Dias</label>
+            <label><input type="radio" name="aRadio" id="aSemanas">Semanas</label>
+            <label><input type="radio" name="aRadio" id="aMeses">Meses</label>
+            <label><input type="radio" name="aRadio" id="aAnos">Anos</label>
+        </div>
+        <div class="resultados">
+            <textarea readonly id="resultado"></textarea>
+            <div class="botones">
+                <input type="button" onclick = "calculate()" value="Calcular" id="calcular">
+                <input type="submit" onclick="empty()" value="Limpiar" id="limpiar">
+            </div>
+        </div>
+        <a href="index.html">Atras</a>
+
+
+    </div>
+    <script src="conversiones.js"></script>
+</body>
+</html>

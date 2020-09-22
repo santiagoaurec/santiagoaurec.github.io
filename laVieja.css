@@ -1,0 +1,205 @@
+*::after,*::before{
+    box-sizing: border-box;
+}
+:root{
+    --cell-size: 150px;
+    --mark-size: calc(var(--cell-size)*.9);
+}
+body{
+    background: black;
+    margin: 0;
+}
+.container{
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.jugadores {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* display: none; */
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+}
+#jugadorx {
+    background-color: rgb(253, 90, 40) ;
+    color: white;
+}
+#jugadoro {
+    background-color:rgb(30, 83, 255) ;
+    color: white;
+}
+.encabezado button{
+    display: block;
+    margin: 100px auto 0px;
+    font-size: 2rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.encabezado input{
+    font-size: 2rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .20em .5em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 160px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.encabezado button:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.encabezado.show {
+    display: flex;
+}
+
+.board{
+    margin: auto;
+    width: 50vw;
+    height: 50vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: rgb(129, 155, 84);
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3n +1){
+    border-left: none;
+}
+.cell:nth-child(3n +3){
+    border-right: none;
+}
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7){
+    border-bottom: none;
+}
+.cell:first-child{
+    border-radius: 30px 0 0 0;
+}
+.cell:last-child{
+    border-radius: 0 0 30px 0;
+}
+.cell:nth-child(3){
+    border-radius: 0 30px 0 0;
+}
+.cell:nth-child(7){
+    border-radius: 0 0 0 30px;
+}
+
+.cell.x,
+.cell.circle{
+    cursor: not-allowed;
+}
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.cirlce .cell:not(.x):not(.circle):hover::after{
+    opacity: 0.3;
+}
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size)*.10);
+    height: var(--mark-size);
+    background-color: rgb(253, 90, 40);
+}
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+    content: '';
+    position: absolute;
+    border-radius: 50% ;
+}
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before{
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: rgb(30, 83, 255);
+}
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+    width: calc(var(--mark-size)*.8);
+    height: calc(var(--mark-size)*.8);
+    background-color: rgb(129, 155, 84);
+}
+
+.winning-message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.winning-message button{
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.winning-message button:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.winning-message.show {
+    display: flex;
+}
+a{
+    color: white;
+    margin-bottom: 20px;
+}

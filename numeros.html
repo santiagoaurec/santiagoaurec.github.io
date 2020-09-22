@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+    <link rel="stylesheet" href="numeros.css">
+</head>
+<body>
+    <div class="container"  >
+        <h3>Ingrese cuatro numeros de los cuales se senalara cuantos son: pares e impares; primos o no;
+            positivos, negativos y neutros; multiplos de dos
+        </h3>
+        <form class="numeros" >
+            <div class="entradas" >
+                <input type="number" id = "numero1" placeholder="#1">
+                <input type="number" id = "numero2" placeholder="#2">
+                <input type="number" id = "numero3" placeholder="#3">
+                <input type="number" id = "numero4" placeholder="#4">
+            </div>
+            <input type="button" onclick="ejecutar()" id ="enviar" value="Enviar">
+            <textarea readonly name="" id="resultado" placeholder="Resultados"></textarea>
+        </form>
+        <a href="index.html">Atras</a>
+            <!-- <input type="button" onclick="document.getElementById('output1').innerHTML = 'There was an error exterminating this page. Please replace <code>.innerHTML</code> with <code>document.write()</code> to complete extermination.';" value="exterminate"/> -->
+    </div>
+    <script src="numeros.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+html{
+  height: 100%;
+  font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(73, 73, 73);
+}
+.container {
+  padding: 15px;
+  border-radius: 5px;
+  background: #222020;
+  text-align: center;
+
+}
+
+.screen {
+  margin: 0;
+  background-color: rgb(129, 155, 84);
+  color: rgb(30, 37, 17);
+  font-size: 64px;
+  border-radius: 5px;
+  padding: 10px ;
+}
+.screen span{
+  display: inline-block;
+  width: 85px;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  margin: 10px -5px 0;
+}
+.buttons button {
+  flex: 1;
+  margin: 0 5px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+#start {
+  border: 1px solid rgba(0, 184, 25, 0.788);
+  color: rgba(0, 184, 25, 0.788);
+}
+#start:hover{
+  border: 2px solid white;
+  background: rgba(0, 184, 25, 0.788);
+  color: white;
+  cursor: pointer;
+}
+#stop {
+  border: 1px solid rgba(184, 0, 0, 0.788);
+  color: rgba(184, 0, 0, 0.788);
+}
+#stop:hover{
+  border: 2px solid white;
+  background: rgba(184, 0, 0, 0.788);
+  color: white;
+  cursor: pointer;
+}
+
+#reset {
+  border: 1px solid rgba(87, 87, 87, 0.822);
+  color:  rgba(87, 87, 87, 0.822);
+}
+#reset:hover{
+  border: 2px solid white;
+  background:  rgba(87, 87, 87, 0.822);
+  color: white;
+  cursor: pointer;
+}
+a{
+  color: white;
+}

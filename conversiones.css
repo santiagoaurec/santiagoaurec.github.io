@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(73, 73, 73);
+}
+.container {
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    background: #222020;
+    width: 1000px;
+    margin: 20px 0;
+}
+
+.title,
+.de,
+.a,
+.botones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.title{
+    color: white;
+}
+.ingresar{
+    background: rgb(129, 155, 84) ;
+    border-radius: 5px;
+    border: solid 2px white;
+    margin: 0 auto 20px;
+    width: 85%;
+}
+.ingresar input[type="number"]{
+    display: block;
+    margin: 10px  auto;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    width: 150px;
+    border-radius: 3px;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+}
+h4{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+}
+.a,
+.de{
+    display: flex;
+    justify-content: center;
+    background: rgb(129, 155, 84);
+    width: 85%;
+    border-radius: 5px;
+    border: solid 2px white ;
+    margin: 0 auto 5px;
+}
+.de input[type = "radio"],
+.a input[type = "radio"]{
+    text-align: center;
+    margin: 25px 5px 20px 15px;
+    background: rgb(194, 233, 128);
+    font-size: 16px;
+}
+
+.resultados textarea{
+    display: block;
+    margin: 20px  auto;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 40px;
+    min-width: 40px;
+    background:black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.botones input[type="button"],
+.botones input[type="submit"]{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    color: white;
+}
+#calcular {
+    background: rgb(33, 33, 255);
+}
+#limpiar {
+    background: rgb(255, 30, 30);
+}
+#calcular:hover {
+    background: rgb(71, 71, 253);
+    cursor: pointer;
+}
+#limpiar:hover {
+    background: rgb(255, 59, 59);
+    cursor: pointer;
+}
+a{
+    color: white;
+    margin-top: 20px;
+}
